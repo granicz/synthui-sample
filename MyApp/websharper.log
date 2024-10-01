@@ -1,0 +1,19 @@
+2024-10-01 17:52:11.9320|DEBUG|Program|location of wsfscservice is: C:\Users\Adam\.nuget\packages\websharper.fsharp\8.0.0.473-beta1\tools\net8.0\win-x64 (server side)
+2024-10-01 17:52:11.9443|DEBUG|Program|pipename is: C:\Users\Adam\.nuget\packages\websharper.fsharp\8.0.0.473-beta1\tools\net8.0\win-x64 (server side)
+2024-10-01 17:52:11.9443|DEBUG|Program|Compiling C:\granicz\synthui-sample\MyApp\MyApp.fsproj
+2024-10-01 17:52:15.9400|TRACE|Program|Server sends: n: F# compilation: 00:00:04.0460351
+2024-10-01 17:52:17.7999|TRACE|Program|Server sends: n: Checking project: 00:00:01.8623193
+2024-10-01 17:52:17.7999|TRACE|Program|Server sends: n: Waiting on merged metadata: 00:00:00.0030443
+2024-10-01 17:52:18.1605|TRACE|Program|Server sends: n: Parsing with FCS: 00:00:00.3575249
+2024-10-01 17:52:18.1605|TRACE|Program|Server sends: n: Analyzing function arguments: 00:00:00.0026338
+2024-10-01 17:52:18.2069|TRACE|Program|Server sends: n: Resolving names: 00:00:00.0437775
+2024-10-01 17:52:18.4491|TRACE|Program|Server sends: n: WebSharper translation: 00:00:00.2422749
+2024-10-01 17:52:18.4660|TRACE|Program|Server sends: n: Source position transformations: 00:00:00.0168216
+2024-10-01 17:52:18.5069|TRACE|Program|Server sends: n: Computing metadata: 00:00:00.0409543
+2024-10-01 17:52:18.6887|TRACE|Program|Server sends: n: Writing prebundle all.js: 00:00:00.1817825
+2024-10-01 17:52:18.6990|TRACE|Program|Server sends: n: Hashing resources: 00:00:00.0103245
+2024-10-01 17:52:18.8068|TRACE|Program|Server sends: n: Serializing metadata: 00:00:00.1077567
+2024-10-01 17:52:18.8845|TRACE|Program|Server sends: n: Writing resources into assembly: 00:00:00.0776855
+2024-10-01 17:52:18.8845|TRACE|Program|Server sends: n: Unpacking into C:\granicz\synthui-sample\MyApp\build
+2024-10-01 17:52:27.5390|TRACE|Program|Server sends: n: Unpacking: 00:00:08.6545473
+2024-10-01 17:52:27.5390|TRACE|Program|Server sends: x: 0
