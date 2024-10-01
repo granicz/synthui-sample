@@ -10,7 +10,12 @@ Order(Name: string; Address: string; Items: Item list)
 OrderPage: Order;
 ```
 
-The key idea in this first stage (ca. 2020)[^1] is automating the generation of web forms and externalizing their entire UI into designer templates, requiring no recompilation on template changes. This is accomplised using the **abstract form** concept from [WebSharper.Forms](https://github.com/dotnet-websharper/forms) and using [WebSharper.UI templating](https://developers.websharper.com/docs/v4.x/fs/ui#heading-8).
+The key idea in this first stage (ca. 2020) is automating the generation of web forms and externalizing their entire UI into designer templates, requiring no recompilation on template changes. This is accomplised using the **abstract form** concept from [WebSharper.Forms](https://github.com/dotnet-websharper/forms) and using [WebSharper.UI templating](https://developers.websharper.com/docs/v4.x/fs/ui#heading-8).
+
+You can read more about the motivations in this 2020 IntelliFactory research paper [^1]:
+
+> Granicz, Adam, Uri, Jozsef, Janko, Andras. **Synthesizing user interfaces using functional reactive web abstractions**. In Programming 2020: Companion Proceedings of the 4th International Conference on Art, Science, and Engineering of Programming. Pages 84-89. 
+
 
 ## How to run this app
 
@@ -61,12 +66,15 @@ We also generate actual form functions in `UI.fs`, that use the abstract forms a
 
 For each page, we output a function in `Client.fs`, fabricate some seed data, call the actual renderer from above, and print the return data (remember, we have a submit button) on the JavaScript console. The code we output differentiates between rendering on the server vs on the client, leaving it to you to customize server-side rendering if needed (pulse animation, etc.) Remember, the actual form lights up on the client after page load.
 
-Finally, we create a sitelet in `Site.fs` and generate an HTML page from our master template (`Main.html`) and hydrate the corresponding form component into its `Body` placeholder.
+Finally, we create a sitelet in `Site.fs` and generate an HTML page for each page using our master template (`Main.html`) as the base and hydrate the corresponding form component into its `Body` placeholder.
 
 ### Template requirements
 
 Note, that the above semantics requires that the master HTML template contains an inner template for each form used, with placeholders matching the declared field names. It also must have an `XXX_Add` placeholder for each `XXX` collection field (such as `Items` above) where we render the "add" widget to manage that collection. The template for this widget is assumed be `<Form>Template_XXX_Add`.
 
 Similarly, the "remove" widget is assumed to be available as an inner template `<Form>Template_Remove`, along with a `Remove` placeholder on the item template.
+
+The add and remove widget templates must have an `Add` and `Remove` event handler, respectively. The generated code populates these with the add/remove logic.
+
 
 [^1]: https://dl.acm.org/doi/10.1145/3397537.3397554
