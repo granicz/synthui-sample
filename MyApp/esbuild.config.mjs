@@ -3,13 +3,13 @@ import { build } from 'esbuild'
 
 cpSync('./build/Content/WebSharper/', './wwwroot/Content/WebSharper/', { recursive: true });
 
-const files = readdirSync('./build/Scripts/WebSharper/Test/');
+const files = readdirSync('./build/Scripts/WebSharper/MyApp/');
 
 files.forEach(file => {
   if (file.endsWith('.js')) {
     var options =
     {
-      entryPoints: ['./build/Scripts/WebSharper/Test/' + file],
+      entryPoints: ['./build/Scripts/WebSharper/MyApp/' + file],
       bundle: true,
       minify: true,
       format: 'iife',
